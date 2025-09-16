@@ -22,7 +22,7 @@ body {
   border-radius: 50px;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.234),
     -6px -6px 10px rgba(255, 255, 255, 0.705);
-  transition: width 0.1s;
+  transition: width 1s;
 }
 
 .input {
