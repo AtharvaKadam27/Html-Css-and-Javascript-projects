@@ -12,3 +12,5 @@ Basics Frontend Projects for Beginners
 8. [Digital Clock](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0b14f814b18d46ed53d6bcfabd18ba74ce7a2476/Digital%20Clock)
 9. [Random Color Generator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0b14f814b18d46ed53d6bcfabd18ba74ce7a2476/Random%20Color%20Generator)
 10. [Dark Mode Toggle](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0ab8727492a625196e9dad2ab304339dd1f0fa77/Dark%20Mode%20Toggle)
+10. [Testimonal Slider](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/85636a241c2029fbf5b9ed3bd46d7600e028f07d/Testimonial%20Slider)
+10. [Dark Mode Toggle](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0ab8727492a625196e9dad2ab304339dd1f0fa77/Dark%20Mode%20Toggle)
