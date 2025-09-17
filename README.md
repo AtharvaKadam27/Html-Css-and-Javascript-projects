@@ -11,3 +11,4 @@ Basics Frontend Projects for Beginners
 7. [Rotating Image Gallery](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/cdc8023a3b8fc13cd7188e4834a45e0616b81c6e/Rotating%20Image%20Gallery)
 8. [Digital Clock](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0b14f814b18d46ed53d6bcfabd18ba74ce7a2476/Digital%20Clock)
 9. [Random Color Generator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0b14f814b18d46ed53d6bcfabd18ba74ce7a2476/Random%20Color%20Generator)
+10. [Dark Mode Toggle](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0ab8727492a625196e9dad2ab304339dd1f0fa77/Dark%20Mode%20Toggle)
