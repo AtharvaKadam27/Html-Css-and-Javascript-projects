@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Loan Calculator</h1>
+    <div class="container">
+      <p>Amount</p>
+      <input
+        onchange="updateEmi()"
+        type="number"
+        value="100000"
+        name=""
+        id="amount"
+        min="1000"
+        max="10000000"
+        step="10000"
+      />
+      <p>Interest</p>
+      <input
+        onchange="updateEmi()"
+        type="number"
+        value="10"
+        min="1"
+        max="20"
+        step=".1"
+        name=""
+        id="interest"
+      />
+      <p>Months</p>
+      <input
+        onchange="updateEmi()"
+        type="number"
+        value="12"
+        min="1"
+        max="360"
+        name=""
+        id="month"
+      />
+      <p id="emi">Amount Per Month :</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
