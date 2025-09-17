@@ -14,3 +14,4 @@ Basics Frontend Projects for Beginners
 10. [Dark Mode Toggle](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/0ab8727492a625196e9dad2ab304339dd1f0fa77/Dark%20Mode%20Toggle)
 11. [Character Counter](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/e01d5acc1fd769fd4170be297c178704bee928f5/Character%20Counter)
 12. [Loan Calculator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/458097257db063b7b10749fa7c752a593cfbc77b/Loan%20Calculator)
+13. [Year Countdown](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/1a03c1f24f4f3eb2e628b15d727655d3fa7351d7/New%20Year%20Countdown)
