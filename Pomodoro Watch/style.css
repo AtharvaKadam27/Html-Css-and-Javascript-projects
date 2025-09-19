@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: cursive;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+.container {
+  width: 40%;
+  text-align: center;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30%;
+}
+
+.container p {
+  font-size: 50px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+.start {
+  background-color: green;
+}
+
+.stop {
+  background-color: red;
+}
+
+.reset {
+  background-color: lightgrey;
+}
