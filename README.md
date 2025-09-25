@@ -17,3 +17,6 @@ Basics Frontend Projects for Beginners
 13. [Year Countdown](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/1a03c1f24f4f3eb2e628b15d727655d3fa7351d7/New%20Year%20Countdown)
 14. [Pomodoro Watch](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/ee1ff271040f4ae626d7495ea4a5f697875596e2/Pomodoro%20Watch)
 15. [Age Calculator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/134e2c1012414173ffe3d03b2282660ea42e50d6/Age%20Calculator)
+16. [Video Trailer PopUp](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Video%20Trailer%20PopUp)
+17. [Temperature Converter](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/3e8cc6d7689b436a6b169cd8f69cf7963c26f9bd/Temperature%20Converter)
+17. [Todo List](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Todo%20List)
