@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  height: 80vh;
+  flex: 0.5;
+  margin: 10px;
+  border-radius: 50px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: flex 0.5s;
+}
+
+h3 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  font-size: 30px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
