@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 68, 0, 0.884);
+}
+
+.toast {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notify {
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
