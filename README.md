@@ -19,4 +19,5 @@ Basics Frontend Projects for Beginners
 15. [Age Calculator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/134e2c1012414173ffe3d03b2282660ea42e50d6/Age%20Calculator)
 16. [Video Trailer PopUp](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Video%20Trailer%20PopUp)
 17. [Temperature Converter](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/3e8cc6d7689b436a6b169cd8f69cf7963c26f9bd/Temperature%20Converter)
-17. [Todo List](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Todo%20List)
+18. [Todo List](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Todo%20List)
+19. [Mini Navbar](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/707747d96bd792eacc5a23abf59a8558706e3892/Mini%20Navbar)
