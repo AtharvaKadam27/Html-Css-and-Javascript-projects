@@ -25,3 +25,4 @@ Basics Frontend Projects for Beginners
 19. [Expanding Cards](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/57b9d8a21654fcac0f2d8c2d23bb505c5d375bbf/Expanding%20card)
 19. [Calculator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/5bcc0b42a3be23a0dbdbbbb3b8e8be4077a9cb9b/Calculator)
 19. [Quiz App](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/f7a74bbe9b046fd94c8b8456db748ca384997111/Quiz%20App)
+19. [Clock](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/7f8e324600984af4a52ac4561c772cd98e8bd8f4/Clock)
