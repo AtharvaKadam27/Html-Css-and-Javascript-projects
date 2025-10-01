@@ -22,3 +22,4 @@ Basics Frontend Projects for Beginners
 18. [Todo List](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Todo%20List)
 19. [Mini Navbar](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/707747d96bd792eacc5a23abf59a8558706e3892/Mini%20Navbar)
 19. [Toast Notification](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/bc614eaecfb780a978e7b39bf0f20caa0ee0d524/Toast%20Notification)
+19. [Expanding Cards](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/57b9d8a21654fcac0f2d8c2d23bb505c5d375bbf/Expanding%20card)
