@@ -24,5 +24,6 @@ Basics Frontend Projects for Beginners
 19. [Toast Notification](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/bc614eaecfb780a978e7b39bf0f20caa0ee0d524/Toast%20Notification)
 17. [Temperature Converter](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/3e8cc6d7689b436a6b169cd8f69cf7963c26f9bd/Temperature%20Converter)
 18. [Todo List](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Todo%20List)
+18. [Toggle Search Bar](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/f70bd994103a92b8fec803c9ad0daef5774e7879/Toggle%20Search%20Bar)
 16. [Video Trailer PopUp](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/54c1945bbd8a9413ae40d95fe2985f471efd2b71/Video%20Trailer%20PopUp)
 2. [Weather App](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/5d98de2967dedf41be9f787111f01098e11cc091/Weather%20App)
