@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.184);
+  width: 25%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.question {
+  margin: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.btn {
+  width: 100%;
+  text-align: left;
+  font-size: 17px;
+  background: rgba(255, 255, 255, 0.125);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.correct {
+  background-color: rgba(0, 128, 0, 0.145);
+}
+
+.incorrect {
+  background: rgba(255, 0, 0, 0.504);
+}
+
+.btn:hover {
+  background: white;
+}
+
+.next {
+  padding: 10px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s;
+  width: 80%;
+  margin: auto;
+}
+
+.next:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 1020px) {
+  .container {
+    width: 40%;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    width: 60%;
+  }
+}
