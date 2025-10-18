@@ -1,6 +1,6 @@
 # Html-Css-and-Javascript-projects
 
-Basics Frontend Projects for Beginners
+Discover, build, and learn! This repository includes 50 creative front-end projects crafted using HTML, CSS, and JavaScript. From responsive websites to interactive mini-apps, each project is a step toward mastering the art of web design and development.
 
 1. [Auto Text](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/17a58ee492fba2151f09e2fb0b661c9f6709177e/Auto%20Text)
 15. [Age Calculator](https://github.com/AtharvaKadam27/Html-Css-and-Javascript-projects/tree/134e2c1012414173ffe3d03b2282660ea42e50d6/Age%20Calculator)
