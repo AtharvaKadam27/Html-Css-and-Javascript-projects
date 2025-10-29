@@ -36,7 +36,7 @@ h1 {
 
 .products .items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -63,4 +63,30 @@ h1 {
   height: 100%;
   border-radius: 20px;
   background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart .cartItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart .cartItem h3 {
+  color: black;
+}
+.cart .cartItem p {
+  color: black;
+}
+
+.cart .cartItem .grp {
+  display: flex;
+  gap: 10px;
+}
+
+.cart .cartItem .grp button {
+  background-color: black;
+  padding: 5px 10px;
 }

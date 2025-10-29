@@ -7,7 +7,7 @@ const products = [
     price: 9.99,
   },
   {
-    id: 3,
+    id: 2,
     image:
       "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp",
     title: "Powder Canister",
@@ -21,6 +21,26 @@ const products = [
     price: 19.99,
   },
 ];
+
+getAddToCart();
+// showAddToCart();
+// function showAddToCart() {
+//   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+//   const buttons = document.querySelectorAll(".addToCart");
+
+//   buttons.forEach((btn) => {
+//     const productEl = btn.closest(".product");
+//     const productId = Number(productEl.dataset.id);
+
+//     const found = cart.some((item) => item.id === productId);
+
+//     if (found) {
+//       btn.style.display = "none";
+//     } else {
+//       btn.style.display = "block";
+//     }
+//   });
+// }
 
 let parentChild = document.querySelector(".items");
 
@@ -43,6 +63,7 @@ products.forEach((item) => {
 });
 
 let addToCart = document.querySelectorAll(".addToCart");
+console.log();
 
 addToCart.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -53,11 +74,50 @@ addToCart.forEach((button) => {
     button.style.display = "none";
     let cartLs = [{ title, price, id, quantity: 1 }];
     let getLs = JSON.parse(localStorage.getItem("cart"));
-    console.log(getLs);
     if (getLs) {
       localStorage.setItem("cart", JSON.stringify([...getLs, ...cartLs]));
     } else {
       localStorage.setItem("cart", JSON.stringify([...cartLs]));
     }
+    getAddToCart();
+  });
+});
+
+function getAddToCart() {
+  let getCart = JSON.parse(localStorage.getItem("cart"));
+  let cart = document.querySelector(".cart");
+  cart.innerHTML = "";
+
+  getCart.forEach((item) => {
+    let cartItem = `<div class="cartItem" data-id=${item.id}>
+              <h3>${item.title}</h3>
+              <p>$ ${item.price}</p>
+              <div class="grp">
+                <button class="dec">-</button>
+                <p class="quant">${item.quantity}</p>
+                <button class="inc">+</button>
+              </div>
+            </div>`;
+    cart.innerHTML += cartItem;
+  });
+}
+
+let inc = document.querySelectorAll(".inc");
+let dec = document.querySelectorAll(".dec");
+
+inc.forEach((increase) => {
+  increase.addEventListener("click", (e) => {
+    let quantity = e.target.closest(".cartItem");
+    let id = quantity.dataset.id;
+    quantity.querySelector(".quant").innerHTML++;
+    let getCart = JSON.parse(localStorage.getItem("cart"));
+    let newCart = getCart.map((p) => {
+      if (p.id == id) {
+        return { ...p, quantity: (p.quantity += 1) };
+      } else {
+        return p;
+      }
+    });
+    localStorage.setItem("cart", JSON.stringify(newCart));
   });
 });
