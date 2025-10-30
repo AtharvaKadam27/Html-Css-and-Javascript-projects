@@ -63,7 +63,6 @@ products.forEach((item) => {
 });
 
 let addToCart = document.querySelectorAll(".addToCart");
-console.log();
 
 addToCart.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -71,13 +70,24 @@ addToCart.forEach((button) => {
     let title = item.dataset.title;
     let price = item.dataset.price;
     let id = item.dataset.id;
-    button.style.display = "none";
-    let cartLs = [{ title, price, id, quantity: 1 }];
+    let cartLs = { title, price, id, quantity: 1 };
     let getLs = JSON.parse(localStorage.getItem("cart"));
     if (getLs) {
-      localStorage.setItem("cart", JSON.stringify([...getLs, ...cartLs]));
+      let already = getLs.find((i) => i.id == id);
+      if (already) {
+        let updateQuant = getLs.map((i) => {
+          if (i.id == id) {
+            return { ...i, quantity: (i.quantity += 1) };
+          } else {
+            return i;
+          }
+        });
+        localStorage.setItem("cart", JSON.stringify(updateQuant));
+      } else {
+        localStorage.setItem("cart", JSON.stringify([...getLs, cartLs]));
+      }
     } else {
-      localStorage.setItem("cart", JSON.stringify([...cartLs]));
+      localStorage.setItem("cart", JSON.stringify([cartLs]));
     }
     getAddToCart();
   });
@@ -88,36 +98,66 @@ function getAddToCart() {
   let cart = document.querySelector(".cart");
   cart.innerHTML = "";
 
-  getCart.forEach((item) => {
-    let cartItem = `<div class="cartItem" data-id=${item.id}>
-              <h3>${item.title}</h3>
-              <p>$ ${item.price}</p>
-              <div class="grp">
-                <button class="dec">-</button>
-                <p class="quant">${item.quantity}</p>
-                <button class="inc">+</button>
-              </div>
-            </div>`;
-    cart.innerHTML += cartItem;
-  });
+  if (getCart) {
+    getCart.forEach((item) => {
+      let cartItem = `<div class="cartItem" data-id=${item.id}>
+                <h3>${item.title}</h3>
+                <p>$ ${item.price}</p>
+                <div class="grp">
+                  <button class="dec">-</button>
+                  <p class="quant">${item.quantity}</p>
+                  <button class="inc">+</button>
+                </div>
+              </div>`;
+      cart.innerHTML += cartItem;
+    });
+    incDec();
+  } else {
+    cart.innerHTML = "<p style='color:black'>Cart is Empty</p>";
+  }
 }
 
-let inc = document.querySelectorAll(".inc");
-let dec = document.querySelectorAll(".dec");
+function incDec() {
+  let inc = document.querySelectorAll(".inc");
+  let dec = document.querySelectorAll(".dec");
 
-inc.forEach((increase) => {
-  increase.addEventListener("click", (e) => {
-    let quantity = e.target.closest(".cartItem");
-    let id = quantity.dataset.id;
-    quantity.querySelector(".quant").innerHTML++;
-    let getCart = JSON.parse(localStorage.getItem("cart"));
-    let newCart = getCart.map((p) => {
-      if (p.id == id) {
-        return { ...p, quantity: (p.quantity += 1) };
+  inc.forEach((increase) => {
+    increase.addEventListener("click", (e) => {
+      let quantity = e.target.closest(".cartItem");
+      let id = quantity.dataset.id;
+      quantity.querySelector(".quant").innerHTML++;
+      let getCart = JSON.parse(localStorage.getItem("cart"));
+      let newCart = getCart.map((p) => {
+        if (p.id == id) {
+          return { ...p, quantity: (p.quantity += 1) };
+        } else {
+          return p;
+        }
+      });
+      localStorage.setItem("cart", JSON.stringify(newCart));
+    });
+  });
+
+  dec.forEach((decrease) => {
+    decrease.addEventListener("click", (e) => {
+      let quantity = e.target.closest(".cartItem");
+      let id = quantity.dataset.id;
+      let getCart = JSON.parse(localStorage.getItem("cart"));
+      if (quantity.querySelector(".quant").innerHTML > 1) {
+        quantity.querySelector(".quant").innerHTML--;
+        let newCart = getCart.map((p) => {
+          if (p.id == id) {
+            return { ...p, quantity: (p.quantity -= 1) };
+          } else {
+            return p;
+          }
+        });
+        localStorage.setItem("cart", JSON.stringify(newCart));
       } else {
-        return p;
+        let filterCart = getCart.filter((i) => i.id != id);
+        localStorage.setItem("cart", JSON.stringify(filterCart));
+        getAddToCart();
       }
     });
-    localStorage.setItem("cart", JSON.stringify(newCart));
   });
-});
+}
