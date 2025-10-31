@@ -16,6 +16,7 @@ body {
 h1 {
   text-align: center;
   text-decoration: underline;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -38,12 +39,20 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  gap: 10px;
 }
 
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  width: 200px;
+  border-radius: 20px;
+  padding: 0px 10px 20px;
+  color: black;
 }
 
 .products .items .top img {
@@ -52,10 +61,23 @@ h1 {
 
 .products .items button {
   padding: 5px 10px;
-  background-color: white;
-  color: black;
+  background-color: blue;
+  color: white;
   border: none;
   cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.products .items .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.products .items .bottom h3,
+p {
+  color: black;
 }
 
 .cart {
@@ -72,6 +94,7 @@ h1 {
 .cart .cartItem {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .cart .cartItem h3 {
