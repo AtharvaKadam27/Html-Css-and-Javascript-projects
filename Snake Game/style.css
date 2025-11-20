@@ -50,3 +50,11 @@ html {
 .block {
   border: 1px solid rgb(108, 106, 106);
 }
+
+.fill {
+  background-color: white;
+}
+
+.food {
+  background-color: rgb(228, 50, 50);
+}
