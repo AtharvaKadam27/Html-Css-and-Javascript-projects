@@ -8,15 +8,11 @@ let restartBtn = document.querySelector(".restart-btn");
 let innerWidth = board.clientWidth;
 let innerHeight = board.clientHeight;
 
-let rows = Math.floor(innerHeight / 80);
-let cols = Math.floor(innerWidth / 80);
+let rows = Math.floor(innerHeight / 30);
+let cols = Math.floor(innerWidth / 30);
 
 let girdBlock = {};
-let snake = [
-  { x: 1, y: 2 },
-  { x: 2, y: 2 },
-  { x: 3, y: 2 },
-];
+let snake = [{ x: 1, y: 2 }];
 let direction = "down";
 let intervalId = null;
 let food = {
@@ -29,13 +25,20 @@ for (let i = 0; i < rows; i++) {
   for (let j = 0; j < cols; j++) {
     let block = document.createElement("div");
     block.classList.add("block");
-    block.innerHTML = `${i}-${j}`;
     girdBlock[`${i}-${j}`] = block;
     board.appendChild(block);
   }
 }
 
-function highScore() {}
+function highScore() {
+  if (!localStorage.getItem("highScore")) {
+    localStorage.setItem("highScore", score);
+    document.querySelector(".high-score h1 span").innerHTML = score;
+  } else if (localStorage.getItem("highScore") < score) {
+    localStorage.setItem("highScore", score);
+    document.querySelector(".high-score h1 span").innerHTML = score;
+  }
+}
 
 function render() {
   let head = null;
@@ -67,6 +70,7 @@ function render() {
     modal.style.display = "flex";
     start.style.display = "none";
     over.style.display = "flex";
+    highScore();
     clearInterval(intervalId);
     return;
   }
@@ -105,9 +109,11 @@ addEventListener("keydown", (e) => {
 
 startBtn.addEventListener("click", () => {
   modal.style.display = "none";
+  document.querySelector(".high-score h1 span").innerHTML =
+    localStorage.getItem("highScore");
   intervalId = setInterval(() => {
     render();
-  }, 500);
+  }, 300);
 });
 
 restartBtn.addEventListener("click", () => {
@@ -125,11 +131,7 @@ restartBtn.addEventListener("click", () => {
 
   girdBlock[`${food.x}-${food.y}`].classList.add("food");
 
-  snake = [
-    { x: 1, y: 2 },
-    { x: 2, y: 2 },
-    { x: 3, y: 2 },
-  ];
+  snake = [{ x: 1, y: 2 }];
 
   score = 0;
   document.querySelector(".score h1 span").innerHTML = "0";
