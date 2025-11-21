@@ -58,3 +58,43 @@ html {
 .food {
   background-color: rgb(228, 50, 50);
 }
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .start,
+.over {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.over {
+  display: none;
+}
+
+.modal button {
+  padding: 12px 25px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+
+.modal button:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}

@@ -1,4 +1,9 @@
 let board = document.querySelector(".board");
+let modal = document.querySelector(".modal");
+let start = document.querySelector(".start");
+let over = document.querySelector(".over");
+let startBtn = document.querySelector(".start-btn");
+let restartBtn = document.querySelector(".restart-btn");
 
 let innerWidth = board.clientWidth;
 let innerHeight = board.clientHeight;
@@ -7,13 +12,18 @@ let rows = Math.floor(innerHeight / 80);
 let cols = Math.floor(innerWidth / 80);
 
 let girdBlock = {};
-let snake = [{ x: 1, y: 2 }];
+let snake = [
+  { x: 1, y: 2 },
+  { x: 2, y: 2 },
+  { x: 3, y: 2 },
+];
 let direction = "down";
 let intervalId = null;
 let food = {
   x: Math.floor(Math.random() * rows),
   y: Math.floor(Math.random() * cols),
 };
+let score = 0;
 
 for (let i = 0; i < rows; i++) {
   for (let j = 0; j < cols; j++) {
@@ -24,6 +34,8 @@ for (let i = 0; i < rows; i++) {
     board.appendChild(block);
   }
 }
+
+function highScore() {}
 
 function render() {
   let head = null;
@@ -40,16 +52,21 @@ function render() {
   girdBlock[`${food.x}-${food.y}`].classList.add("food");
 
   if (food.x == head.x && food.y == head.y) {
+    document.querySelector(".score h1 span").innerHTML = ++score;
+    snake = [...snake, { x: food.x, y: food.y }];
     girdBlock[`${food.x}-${food.y}`].classList.remove("food");
     food = {
       x: Math.floor(Math.random() * rows),
       y: Math.floor(Math.random() * cols),
     };
+
     girdBlock[`${food.x}-${food.y}`].classList.add("food");
   }
 
   if (head.x < 0 || head.y < 0 || head.x >= rows || head.y >= cols) {
-    alert("Game Over");
+    modal.style.display = "flex";
+    start.style.display = "none";
+    over.style.display = "flex";
     clearInterval(intervalId);
     return;
   }
@@ -66,20 +83,59 @@ function render() {
   });
 }
 
-// intervalId = setInterval(() => {
-//   render();
-// }, 500);
-
 addEventListener("keydown", (e) => {
   if (e.key == "ArrowUp") {
-    direction = "up";
+    if (direction != "down") {
+      direction = "up";
+    }
   } else if (e.key == "ArrowDown") {
-    direction = "down";
+    if (direction != "up") {
+      direction = "down";
+    }
   } else if (e.key == "ArrowLeft") {
-    direction = "left";
+    if (direction != "right") {
+      direction = "left";
+    }
   } else if (e.key == "ArrowRight") {
-    direction = "right";
+    if (direction != "left") {
+      direction = "right";
+    }
   }
 });
 
+startBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  intervalId = setInterval(() => {
+    render();
+  }, 500);
+});
+
+restartBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  snake.forEach((saap) => {
+    girdBlock[`${saap.x}-${saap.y}`].classList.remove("fill");
+  });
+  direction = "down";
+
+  girdBlock[`${food.x}-${food.y}`].classList.remove("food");
+  food = {
+    x: Math.floor(Math.random() * rows),
+    y: Math.floor(Math.random() * cols),
+  };
+
+  girdBlock[`${food.x}-${food.y}`].classList.add("food");
+
+  snake = [
+    { x: 1, y: 2 },
+    { x: 2, y: 2 },
+    { x: 3, y: 2 },
+  ];
+
+  score = 0;
+  document.querySelector(".score h1 span").innerHTML = "0";
+
+  intervalId = setInterval(() => {
+    render();
+  }, 500);
+});
 // render();
